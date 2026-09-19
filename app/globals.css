@@ -1375,10 +1375,11 @@ a {
 }
 
 .mobile-menu-layer {
-  position: fixed;
-  inset: 0;
-  z-index: 200;
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 9999 !important;
   isolation: isolate;
+  overflow: hidden;
 }
 
 .mobile-menu-overlay {
@@ -1393,12 +1394,12 @@ a {
 }
 
 .mobile-drawer {
-  position: absolute;
-  top: 0;
-  right: 0;
+  position: fixed;
+  inset: 0;
   z-index: 1;
-  width: min(86vw, 390px);
-  height: 100%;
+  width: 100vw;
+  height: 100dvh;
+  max-width: none;
   padding: 25px;
   display: flex;
   flex-direction: column;
@@ -1962,6 +1963,10 @@ a {
     padding: 14px 0;
     font-size: 21px;
   }
+}
+
+body.mobile-menu-open > main > *:not(header) {
+  visibility: hidden;
 }
 
 @media (max-width: 900px) {

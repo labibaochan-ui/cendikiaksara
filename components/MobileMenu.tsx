@@ -42,6 +42,7 @@ export default function MobileMenu() {
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "";
+    document.body.classList.toggle("mobile-menu-open", isOpen);
 
     function handleEscape(event: KeyboardEvent) {
       if (event.key === "Escape") {
@@ -53,6 +54,7 @@ export default function MobileMenu() {
 
     return () => {
       document.body.style.overflow = "";
+      document.body.classList.remove("mobile-menu-open");
       document.removeEventListener("keydown", handleEscape);
     };
   }, [isOpen]);
