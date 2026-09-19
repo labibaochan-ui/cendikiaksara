@@ -5,11 +5,13 @@
   --mint: #97f8af;
   --mint-light: #e8ffed;
   --dark: #14251d;
+  --ink-blue: #1d3440;
   --text: #23322a;
   --muted: #748078;
   --cream: #f8faf6;
   --line: #dce5dd;
   --green: #5ec979;
+  --coral: #e98268;
 }
 
 * {
@@ -19,7 +21,14 @@
 
 body {
   margin: 0;
-  background: var(--cream);
+  background:
+    linear-gradient(rgba(248, 250, 246, 0.96), rgba(248, 250, 246, 0.96)),
+    repeating-linear-gradient(
+      0deg,
+      transparent 0,
+      transparent 31px,
+      rgba(35, 50, 42, 0.035) 32px
+    );
   color: var(--text);
   font-family: "Manrope", sans-serif;
 }
@@ -977,6 +986,102 @@ a {
 
 .header-whatsapp-button:hover {
   background: #159447;
+}
+
+/* Homepage polish */
+.navbar {
+  position: relative;
+  z-index: 10;
+}
+
+.navbar::after {
+  position: absolute;
+  right: 32px;
+  bottom: 0;
+  left: 32px;
+  height: 1px;
+  background: var(--line);
+  content: "";
+}
+
+.hero {
+  position: relative;
+  isolation: isolate;
+}
+
+.hero::before {
+  position: absolute;
+  top: 42px;
+  right: 5%;
+  z-index: -1;
+  width: 46%;
+  height: 76%;
+  border-radius: 35% 65% 42% 58%;
+  background: #eef8ee;
+  content: "";
+  transform: rotate(-7deg);
+}
+
+.hero-card {
+  background: linear-gradient(145deg, #a4f7b7 0%, #7be69a 100%);
+  box-shadow: 18px 20px 0 #dcefe0, 0 26px 55px rgba(20, 37, 29, 0.12);
+}
+
+.floating-note {
+  box-shadow: 0 10px 30px rgba(20, 37, 29, 0.12);
+}
+
+.preview-card {
+  box-shadow: 0 10px 26px rgba(35, 50, 42, 0.035);
+  transition: 0.25s ease;
+}
+
+.preview-card:hover {
+  border-color: #9bdca7;
+  box-shadow: 0 16px 32px rgba(35, 50, 42, 0.08);
+  transform: translateY(-5px);
+}
+
+.featured-card {
+  background: #f1fff3;
+}
+
+.cta-section {
+  box-shadow: 0 20px 45px rgba(90, 190, 110, 0.12);
+}
+
+.cta-section::before {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--coral);
+  box-shadow: 23px 23px 0 var(--dark), -22px 40px 0 rgba(255, 255, 255, 0.55);
+  content: "";
+}
+
+.footer-links a {
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--coral);
+}
+
+@media (max-width: 800px) {
+  .navbar::after {
+    right: 20px;
+    left: 20px;
+  }
+
+  .hero::before {
+    top: 43%;
+    right: 0;
+    width: 92%;
+    height: 40%;
+  }
 }
 
 .whatsapp-button {
