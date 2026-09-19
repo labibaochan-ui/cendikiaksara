@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "CendikiAksara" }],
   creator: "CendikiAksara",
+  verification: {
+    google: "8YXwt5TQlgikwAL80pn9ny3QJOVFN7LZl6z67xiULXI",
+  },
   alternates: {
     canonical: "/",
   },
