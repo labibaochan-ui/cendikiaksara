@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Header from "@/components/Header";
+import AIChat from "@/components/AIChat";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import RegisterButton from "@/components/RegisterButton";
 import { whatsappLink, whatsappMessages } from "@/lib/whatsapp";
@@ -350,6 +351,7 @@ export default function Home() {
           <span>Asah nalar, ciptakan aksara.</span>
         </div>
       </footer>
+      <AIChat />
       <WhatsAppFloat />
     </main>
   );
