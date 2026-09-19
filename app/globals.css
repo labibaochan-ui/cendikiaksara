@@ -1935,6 +1935,35 @@ a {
   }
 }
 
+@media (max-width: 600px) {
+  .mobile-menu-layer {
+    background: #f8faf6;
+  }
+
+  .mobile-menu-overlay {
+    display: none;
+  }
+
+  .mobile-drawer {
+    width: 100vw;
+    max-width: none;
+    padding: 22px 20px 28px;
+    background: #f8faf6;
+    box-shadow: none;
+  }
+
+  .mobile-drawer-nav {
+    flex: 1;
+    justify-content: center;
+    padding: 20px 0 30px;
+  }
+
+  .mobile-nav-link {
+    padding: 14px 0;
+    font-size: 21px;
+  }
+}
+
 @media (max-width: 900px) {
   .preview-card:nth-child(2),
   .preview-card:nth-child(3) {
