@@ -2086,15 +2086,6 @@ body.mobile-menu-open > main > *:not(header) {
   visibility: hidden;
 }
 
-body.mobile-menu-open::before {
-  position: fixed;
-  inset: -100px;
-  z-index: 9998;
-  background: var(--dark);
-  content: "";
-  pointer-events: none;
-}
-
 @media (max-width: 900px) {
   .preview-card:nth-child(2),
   .preview-card:nth-child(3) {
