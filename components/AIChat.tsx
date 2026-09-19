@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useRef, useState } from "react";
 
 type Message = {
   role: "user" | "assistant";
@@ -18,6 +18,21 @@ export default function AIChat() {
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState<Message[]>([initialMessage]);
   const [isLoading, setIsLoading] = useState(false);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const messagesRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (isOpen) {
+      inputRef.current?.focus();
+    }
+  }, [isOpen]);
+
+  useEffect(() => {
+    messagesRef.current?.scrollTo({
+      top: messagesRef.current.scrollHeight,
+      behavior: "smooth",
+    });
+  }, [messages, isLoading]);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -81,7 +96,7 @@ export default function AIChat() {
             </button>
           </div>
 
-          <div className="ai-chat-messages" aria-live="polite">
+          <div className="ai-chat-messages" aria-live="polite" ref={messagesRef}>
             {messages.map((message, index) => (
               <div className={`ai-chat-message ${message.role}`} key={`${message.role}-${index}`}>
                 {message.content}
@@ -92,6 +107,7 @@ export default function AIChat() {
 
           <form className="ai-chat-form" onSubmit={handleSubmit}>
             <input
+              ref={inputRef}
               value={input}
               onChange={(event) => setInput(event.target.value)}
               placeholder="Tulis pertanyaan..."
