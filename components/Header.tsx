@@ -6,10 +6,10 @@ import RegisterButton from "./RegisterButton";
 
 export default function Header() {
   return (
-    <header className="navbar">
+    <header className="navbar" data-site-header="true">
       <BrandLogo />
 
-      <nav className="nav-links">
+      <nav className="nav-links" aria-label="Navigasi utama">
         <Link href="/layanan">Layanan</Link>
         <Link href="/#cara-kerja">Cara Kerja</Link>
         <Link href="/tentang">Tentang Kami</Link>

@@ -42,8 +42,9 @@ export default function ServicesPage() {
         </div>
 
         <div className="services-grid">
-          {services.map((service) => (
+          {services.map((service, index) => (
             <article className="service-card" key={service.slug}>
+              <span className="service-card-number">0{index + 1}</span>
               <div className="service-card-top">
                 <span className="service-label">{service.label}</span>
                 {service.badge && (

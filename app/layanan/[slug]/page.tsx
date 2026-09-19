@@ -31,6 +31,9 @@ export default async function ServiceDetailPage({ params }: Props) {
       <Header />
 
       <section className="service-detail-page">
+        <Link href="/layanan" className="service-back-link">
+          ← Semua layanan
+        </Link>
         <div className="service-detail-hero">
           <div>
             <div className="section-label">{service.label}</div>

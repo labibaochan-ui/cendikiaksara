@@ -1037,6 +1037,10 @@ a {
 .navbar {
   position: relative;
   z-index: 10;
+  position: sticky;
+  top: 0;
+  background: rgba(248, 250, 246, 0.9);
+  backdrop-filter: blur(14px);
 }
 
 .navbar::after {
@@ -1047,6 +1051,29 @@ a {
   height: 1px;
   background: var(--line);
   content: "";
+}
+
+.nav-links a {
+  position: relative;
+  padding: 8px 0;
+}
+
+.nav-links a::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: var(--mint);
+  content: "";
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.2s ease;
+}
+
+.nav-links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 .hero {
