@@ -1376,10 +1376,11 @@ a {
 
 .mobile-menu-layer {
   position: fixed !important;
-  inset: 0 !important;
+  inset: -1px !important;
   z-index: 9999 !important;
   isolation: isolate;
   overflow: hidden;
+  background: var(--dark);
 }
 
 .mobile-menu-overlay {
@@ -1395,7 +1396,7 @@ a {
 
 .mobile-drawer {
   position: fixed;
-  inset: 0;
+  inset: -1px;
   z-index: 1;
   width: auto;
   height: auto;
