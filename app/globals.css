@@ -1397,8 +1397,9 @@ a {
   position: fixed;
   inset: 0;
   z-index: 1;
-  width: 100vw;
-  height: 100dvh;
+  width: auto;
+  height: auto;
+  min-height: 100vh;
   max-width: none;
   padding: 25px;
   display: flex;
@@ -1946,13 +1947,22 @@ a {
   }
 
   .mobile-drawer {
-    width: 100vw;
+    width: auto;
     max-width: none;
     padding: 22px 20px 28px;
     background: var(--dark);
     box-shadow: none;
     animation: mobile-drawer-in 0.16s ease-out both;
     will-change: transform;
+  }
+
+  .mobile-register-button {
+    background: var(--mint);
+    color: var(--dark);
+  }
+
+  .mobile-register-button:hover {
+    background: #b5ffca;
   }
 
   .mobile-drawer .brand-logo,
