@@ -32,6 +32,7 @@ export async function POST(request: Request) {
     },
     body: JSON.stringify({
       model,
+      max_tokens: 300,
       messages: [
         {
           role: "system",
@@ -41,6 +42,7 @@ export async function POST(request: Request) {
         ...body.messages,
       ],
     }),
+    signal: AbortSignal.timeout(15000),
   });
 
   if (!response.ok) {

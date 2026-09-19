@@ -46,11 +46,15 @@ export default function AIChat() {
     setIsLoading(true);
 
     try {
+      const controller = new AbortController();
+      const timeout = window.setTimeout(() => controller.abort(), 18000);
       const response = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ messages: nextMessages.slice(-8) }),
+        signal: controller.signal,
       });
+      window.clearTimeout(timeout);
       const result = (await response.json()) as { content?: string; error?: string };
 
       if (!response.ok || !result.content) {
@@ -67,7 +71,9 @@ export default function AIChat() {
         {
           role: "assistant",
           content:
-            error instanceof Error
+            error instanceof DOMException && error.name === "AbortError"
+              ? "Responsnya sedang lama. Coba kirim pertanyaan yang lebih singkat."
+              : error instanceof Error
               ? error.message
               : "Maaf, coba beberapa saat lagi.",
         },
