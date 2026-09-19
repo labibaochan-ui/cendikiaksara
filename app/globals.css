@@ -1938,7 +1938,7 @@ a {
 
 @media (max-width: 600px) {
   .mobile-menu-layer {
-    background: #f8faf6;
+    background: var(--dark);
   }
 
   .mobile-menu-overlay {
@@ -1949,8 +1949,25 @@ a {
     width: 100vw;
     max-width: none;
     padding: 22px 20px 28px;
-    background: #f8faf6;
+    background: var(--dark);
     box-shadow: none;
+    animation: mobile-drawer-in 0.16s ease-out both;
+    will-change: transform;
+  }
+
+  .mobile-drawer .brand-logo,
+  .mobile-drawer .brand-logo-full {
+    filter: brightness(0) invert(1);
+  }
+
+  .mobile-drawer-header {
+    border-color: rgba(255, 255, 255, 0.16);
+  }
+
+  .drawer-close {
+    border-color: rgba(255, 255, 255, 0.2);
+    background: transparent;
+    color: white;
   }
 
   .mobile-drawer-nav {
@@ -1961,7 +1978,34 @@ a {
 
   .mobile-nav-link {
     padding: 14px 0;
+    border-color: rgba(255, 255, 255, 0.16);
+    color: white;
     font-size: 21px;
+    letter-spacing: -0.5px;
+  }
+
+  .mobile-nav-link span {
+    color: var(--mint);
+  }
+
+  .mobile-nav-link:hover {
+    color: var(--mint);
+  }
+
+  .mobile-instagram-link {
+    color: rgba(255, 255, 255, 0.65);
+  }
+}
+
+@keyframes mobile-drawer-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 12px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 }
 
