@@ -1,0 +1,260 @@
+.services-page,
+.service-detail-page {
+  max-width: 1280px;
+  padding: 80px 32px 120px;
+  margin: auto;
+}
+
+.services-hero {
+  max-width: 720px;
+  margin-bottom: 65px;
+}
+
+.services-hero h1,
+.service-detail-hero h1 {
+  margin: 20px 0;
+  color: #14251d;
+  font-size: clamp(42px, 6vw, 76px);
+  line-height: 1;
+  letter-spacing: -4px;
+}
+
+.services-hero h1 span,
+.service-detail-hero h1 span,
+.integrity-banner h2 span {
+  color: #5ec979;
+  font-family: "Playfair Display", Georgia, serif;
+  font-style: italic;
+  letter-spacing: -3px;
+}
+
+.services-hero p,
+.service-detail-hero p {
+  max-width: 560px;
+  color: #748078;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.service-card {
+  padding: 28px;
+  border: 1px solid #dce5dd;
+  border-radius: 15px;
+  background: white;
+}
+
+.service-card:hover {
+  border-color: #8dd99e;
+}
+
+.service-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.service-label {
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 1.2px;
+  color: #6f8b77;
+}
+
+.service-badge {
+  padding: 7px 9px;
+  border-radius: 5px;
+  background: #e8ffed;
+  color: #4a9b5b;
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+}
+
+.service-card h2 {
+  margin: 45px 0 12px;
+  color: #14251d;
+  font-size: 27px;
+  letter-spacing: -1px;
+}
+
+.service-description {
+  min-height: 54px;
+  color: #748078;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.service-price {
+  margin-top: 27px;
+  color: #14251d;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.service-early-bird {
+  margin-top: 5px;
+  color: #50ba68;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.service-duration {
+  padding: 18px 0;
+  margin-top: 20px;
+  border-top: 1px solid #dce5dd;
+  color: #748078;
+  font-size: 12px;
+}
+
+.service-card ul,
+.detail-feature-list {
+  padding: 0;
+  margin: 0 0 28px;
+  list-style: none;
+}
+
+.service-card li,
+.detail-feature-list li {
+  padding: 8px 0;
+  color: #23322a;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.service-button {
+  width: 100%;
+}
+
+.integrity-banner {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  gap: 70px;
+  align-items: center;
+  padding: 65px;
+  margin-top: 80px;
+  border-radius: 18px;
+  background: #97f8af;
+}
+
+.integrity-banner h2 {
+  margin: 18px 0 0;
+  color: #14251d;
+  font-size: 39px;
+  line-height: 1.1;
+  letter-spacing: -2px;
+}
+
+.integrity-banner p {
+  color: #4d7758;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.service-detail-hero {
+  display: grid;
+  grid-template-columns: 1fr 330px;
+  gap: 90px;
+  align-items: center;
+  padding-bottom: 90px;
+}
+
+.service-summary {
+  padding: 28px;
+  border-radius: 14px;
+  background: white;
+  box-shadow: 0 12px 35px rgba(20, 37, 29, 0.08);
+}
+
+.service-summary strong {
+  display: block;
+  margin: 20px 0 7px;
+  color: #14251d;
+  font-size: 28px;
+}
+
+.service-summary p {
+  font-size: 12px;
+}
+
+.service-summary hr {
+  margin: 25px 0;
+  border: 0;
+  border-top: 1px solid #dce5dd;
+}
+
+.service-detail-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  padding: 75px 0;
+  border-top: 1px solid #dce5dd;
+}
+
+.service-detail-content h2 {
+  margin: 18px 0 28px;
+  color: #14251d;
+  font-size: 38px;
+  letter-spacing: -2px;
+}
+
+.policy-box {
+  padding: 30px;
+  border-left: 4px solid #77dc8b;
+  background: #e8ffed;
+}
+
+.policy-box h2 {
+  margin-top: 0;
+  color: #14251d;
+  font-size: 21px;
+}
+
+.policy-box p {
+  max-width: 750px;
+  color: #50735a;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+@media (max-width: 900px) {
+  .service-detail-hero,
+  .service-detail-content,
+  .integrity-banner {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .services-page,
+  .service-detail-page {
+    padding: 65px 20px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-hero h1,
+  .service-detail-hero h1 {
+    font-size: 48px;
+    letter-spacing: -3px;
+  }
+
+  .integrity-banner {
+    gap: 30px;
+    padding: 32px;
+  }
+
+  .integrity-banner h2 {
+    font-size: 31px;
+  }
+
+  .service-detail-hero {
+    gap: 45px;
+  }
+}

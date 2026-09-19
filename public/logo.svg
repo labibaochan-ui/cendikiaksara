@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 280" role="img" aria-labelledby="logoTitle logoDesc">
+  <title id="logoTitle">CendikiAksara</title>
+  <desc id="logoDesc">Logo Cendiki-Aksara Scientific Writing</desc>
+
+  <text
+    x="360"
+    y="88"
+    text-anchor="middle"
+    fill="#1A1A1A"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="58"
+    font-weight="500"
+  >Cendiki-Aksara</text>
+
+  <line x1="56" y1="128" x2="318" y2="128" stroke="#E8783A" stroke-width="3.2" stroke-linecap="round" />
+  <line x1="402" y1="128" x2="664" y2="128" stroke="#E8783A" stroke-width="3.2" stroke-linecap="round" />
+
+  <g transform="translate(360 128)">
+    <path
+      d="M-16 -18
+         H16
+         V-8
+         H10
+         V-2
+         H18
+         L0 46
+         L-18 -2
+         H-10
+         V-8
+         H-16
+         Z"
+      fill="#F0A36A"
+    />
+    <path
+      d="M-7 -18 H7 V-8 H-7 Z"
+      fill="#E8783A"
+    />
+    <path
+      d="M0 -2 V38"
+      fill="none"
+      stroke="#F8E1C8"
+      stroke-width="1.6"
+    />
+    <circle cx="0" cy="8" r="2.2" fill="#F8E1C8" />
+  </g>
+
+  <text
+    x="360"
+    y="228"
+    text-anchor="middle"
+    fill="#1A1A1A"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="22"
+    letter-spacing="10"
+  >SCIENTIFIC WRITING</text>
+</svg>
