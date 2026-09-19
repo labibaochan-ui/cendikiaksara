@@ -1376,10 +1376,13 @@ a {
 
 .mobile-menu-layer {
   position: fixed !important;
-  inset: -1px !important;
+  top: -1px !important;
+  right: -40px !important;
+  bottom: -80px !important;
+  left: -1px !important;
   z-index: 9999 !important;
   isolation: isolate;
-  overflow: hidden;
+  overflow: visible;
   background: var(--dark);
 }
 
@@ -1396,7 +1399,10 @@ a {
 
 .mobile-drawer {
   position: fixed;
-  inset: -1px;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
   z-index: 1;
   width: auto;
   height: auto;
